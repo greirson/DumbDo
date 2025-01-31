@@ -1,0 +1,13 @@
+services:
+  dumbdo:
+    image: dumbwareio/dumbdo:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=America/Los_Angeles # Set timezone
+      # Uncomment and set these if needed:
+      # - PORT=3000
+      # - DUMBDO_PIN=1234
+    restart: unless-stopped 
